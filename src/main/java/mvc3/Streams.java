@@ -4,10 +4,7 @@ import org.springframework.util.StreamUtils;
 
 import java.text.NumberFormat;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 import static java.util.stream.IntStream.iterate;
 
@@ -42,11 +39,19 @@ public class Streams {
     public static LongStream getRandomStream(long a, long c, long m, long seed){
         return LongStream.iterate(seed,x -> (a*x+c)%m).skip(1);
     }
-    public static <T> Stream<T> zip(Stream<T> first, Stream<T> second){
+    public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
+        //LETS BUILD A BICYCLE!!!!!!!
+        List<T> f = first.collect(Collectors.toList());
+        List<T> s = second.collect(Collectors.toList());
+        int size = Math.min(f.size(),s.size());
         Stream.Builder<T> builder = Stream.builder();
-        builder.add().andThen()
-        return Stream.concat(first,second);
-    }
 
+        for(int i=0;i<size;i++){
+            builder.add(f.get(i));
+            builder.add(s.get(i));
+        }
+        return builder.build();
+    }
+    public static
 
 }
