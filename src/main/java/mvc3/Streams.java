@@ -1,9 +1,15 @@
 package mvc3;
 
-import java.lang.reflect.Array;
+import org.springframework.util.StreamUtils;
+
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+import java.util.stream.Stream;
+
+import static java.util.stream.IntStream.iterate;
 
 public class Streams {
     public static String oddNames(List<String> names) {
@@ -33,5 +39,14 @@ public class Streams {
             return NumberFormat.getInstance().parse(str);
         }catch (Exception e){throw new RuntimeException(e);}
     }
+    public static LongStream getRandomStream(long a, long c, long m, long seed){
+        return LongStream.iterate(seed,x -> (a*x+c)%m).skip(1);
+    }
+    public static <T> Stream<T> zip(Stream<T> first, Stream<T> second){
+        Stream.Builder<T> builder = Stream.builder();
+        builder.add().andThen()
+        return Stream.concat(first,second);
+    }
+
 
 }

@@ -1,32 +1,26 @@
 package mvc3;
 
+import java.time.LocalTime;
 import java.util.*;
+import java.util.stream.LongStream;
+import java.util.stream.Stream;
 
 public class App {
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
+        final long CONST_A = 25214903917L;
+        final long CONST_C = 11L;
+        final long CONST_M = 281_474_976_710_656L;
+        List<String> names = Arrays.asList("Ivan0","Ivan1","Ivan2","Ivan3","Ivan4","Ivan5","aIvan6");
         Collection<String> numbers = Arrays.asList ("1, 2, 0", "4, 5", "2.5,7");
-        ArrayList<Number> nums = new ArrayList<>();
-        nums.add(1);
-        nums.add(2.5);
-        System.out.println(nums);
-        for (Number num:nums){
-            System.out.println(num.getClass());
-        }
-        names.add("Ivan0");
-        names.add("Ivan1");
-        names.add("Ivan2");
-        names.add("Ivan3");
-        names.add("Ivan4");
-        names.add("Ivan5");
-        names.add("aivan6");
+        List <Integer> numerator = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        Stream<String> first = numerator.stream().map(i->"first"+i);
+        Stream<String> second = numerator.stream().map(i->"second"+i);
+
         System.out.println(Streams.oddNames(names));
         System.out.println(Streams.uppercaseAndDesc(names));
-        List n2 = Streams.toNumbers(numbers);
-        System.out.println();
-        for (Object n:n2){
-            System.out.println(n.getClass());
-        }
-
+        System.out.println(Streams.toNumbers(numbers));
+        System.out.println("=================");
+        Streams.getRandomStream(CONST_A,CONST_C,CONST_M,0).limit(10).forEach(System.out::println);
+        Streams.zip(first,second).forEach(System.out::println);
     }
 }
