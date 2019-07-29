@@ -1,0 +1,5 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×Çàúÿÿÿÿ
+Xsquid:UselessImportCheck"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8Æ©°ĞÂ-
+fsquid:UselessImportCheck"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8Æ©°ĞÂ-
+vsquid:UselessImportCheck"KRemove this unused import 'org.springframework.context.ApplicationContext'.(»Ô»¿8ë”¡ĞÂ-

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    <context:component-scan base-package="mvc" />-->
+    <!--    <aop:aspectj-autoproxy />-->
+
+    <bean id="client" class="mvc.Client">
+        <constructor-arg type="int" value="1"/>
+        <constructor-arg type="java.lang.String" value="John"/>
+    </bean>
+    <bean id="app" class="mvc.App">
+        <constructor-arg ref="eventLogger"/>
+        <constructor-arg ref="client"/>
+    </bean>
+    <bean id="event" class="mvc.Event" scope="prototype">
+        <constructor-arg>
+<!--            <bean factory-method="now" class="java.time.LocalDateTime"/>-->
+
+
+            <map>
+                <entry key="aaa" value="['aaa', 'bbb']"/>
+            </map>
+        </constructor-arg>
+        <property name="message" value="hello 1"/>
+    </bean>
+
+    <bean id="eventLogger" class="mvc.ConsoleEventLogger"/>
+    <bean id="logAspect" class="mvc.LogAspect"/>
+
+        <aop:config>
+            <aop:aspect id="consoleLimitAspect" ref="logAspect">
+                <aop:pointcut id="consoleLogging"
+                              expression="execution(* *.logEvent(..))" />
+                <aop:before pointcut-ref="consoleLogging" method="logBefore" />
+            </aop:aspect>
+        </aop:config>
+
+
+
+</beans>
