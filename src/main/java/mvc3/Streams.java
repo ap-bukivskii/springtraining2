@@ -52,6 +52,5 @@ public class Streams {
         }
         return builder.build();
     }
-    public static
 
 }

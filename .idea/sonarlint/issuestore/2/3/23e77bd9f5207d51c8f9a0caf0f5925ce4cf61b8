@@ -1,14 +1,16 @@
 
-U
-squid:S106"9Replace this use of System.out or System.err by a logger.(Õ×ÁG8º¡áñÂ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(®È‰üÿÿÿÿ8º¡áñÂ-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ıêœºüÿÿÿÿ
 V
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÜúüÑ8º¡áñÂ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(‡×8¼®éÃ-
 [
-squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8º¡áñÂ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(¡¤–õûÿÿÿÿ8º¡áñÂ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‘­ûäúÿÿÿÿ8º¡áñÂ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(®È‰üÿÿÿÿ8º™€ìÃ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÜúüÑ8º¡áñÂ-
+hsquid:UselessImportCheck"8Remove this unused import 'java.util.stream.LongStream'.(óœñıÿÿÿÿ8¡·üëÃ-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(²ÏË8ÀâàèÃ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ˆ£¬¡8ãÊÿèÃ-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(œö—*8£™†ìÃ-
+`squid:UselessImportCheck"0Remove this unused import 'java.time.LocalTime'.(à®øÃùÿÿÿÿ8ìïíÃ-

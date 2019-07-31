@@ -1,7 +1,7 @@
 
+jsquid:S00112%"FDefine and throw a dedicated exception instead of using a generic one.(–æÇ¿úÿÿÿÿ8©ÎÄñÂ-
+lsquid:UselessImportCheck"ARemove this unused import 'org.springframework.util.StreamUtils'.(Ò‰Øä8ÖÆ“îÃ-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ıêœºüÿÿÿÿ
-jsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ã‹Ñ¢ıÿÿÿÿ8ØœÂñÂ-
-]squid:S1118":Add a private constructor to hide the implicit public one.(Ï±ó¨ûÿÿÿÿ8™øËñÂ-
-jsquid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(–æÇ¿úÿÿÿÿ8©ÎÄñÂ-
-¢%squid:RedundantThrowsDeclarationCheck"eRemove the declaration of thrown exception 'java.lang.RuntimeException' which is a runtime exception.(ã‹Ñ¢ıÿÿÿÿ8ØœÂñÂ-
-_squid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8†åŸñÂ-
+¢%squid:RedundantThrowsDeclarationCheck""eRemove the declaration of thrown exception 'java.lang.RuntimeException' which is a runtime exception.(ã‹Ñ¢ıÿÿÿÿ8ØœÂñÂ-
+jsquid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(ã‹Ñ¢ıÿÿÿÿ8ØœÂñÂ-
+]squid:S1118":Add a private constructor to hide the implicit public one.(Ï±ó¨ûÿÿÿÿ8™øËñÂ-
